@@ -8,6 +8,9 @@
     var array_puntos = JSON.parse(localStorage.string_array_puntos);
    //escuchando al evento click  del boton inicializar
   	//$("#btnInicializar").on('click', alert('llamada'));
+
+var socket=io.connect('https://mapajeday.herokuapp.com/');
+
 var app={
       geolocalizar:function (){
         GMaps.geolocate({
@@ -83,6 +86,14 @@ var app={
         array_puntos = JSON.parse(localStorage.string_array_puntos);
         app.geolocalizar();
       },
+	
+	listenSocket:function(){
+	socket.on('usuario conectado', function(contador){
+		
+	
+	});
+		
+	},	
 
 
     inicializar: function() {
