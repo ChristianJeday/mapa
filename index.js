@@ -14,7 +14,7 @@ app.get('/',function(req,res){
 
 });
 
-http.listen(port, function(){
+http.listen(port, function(){//redirigiendo
 	console.log('Escuchando en el puerto: ' +port);
 
 });
