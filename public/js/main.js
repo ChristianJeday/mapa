@@ -89,7 +89,7 @@ var app={
 	
 	listenSocket:function(){
 	socket.on('usuario conectado', function(contador){
-		
+		$('#divContador').html('contador')	//Cargando datos en el div
 	
 	});
 		
@@ -100,6 +100,7 @@ var app={
 		"use strict";
 		var self=this;
         self.cargarMapa(); //llamando metodo que carga el mapa
+	self.listenSocket(),//activando socket    
 	}
 
 };
